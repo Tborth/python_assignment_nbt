@@ -1,5 +1,5 @@
 import pytest
-from app import app, db, User, Department, Course, Student, AttendanceLog
+from apps import app,db
 
 # ---------------------- Pytest Fixtures ---------------------- #
 

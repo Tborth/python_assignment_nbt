@@ -1,4 +1,3 @@
-# User Schema
 from apps import ma
 from models import User,Department,Course,Student,AttendanceLog
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema

@@ -2,7 +2,7 @@
 from flask import request, jsonify
 from models import app,db,User,Department,Course,Student,AttendanceLog
 from utitlity import model_to_dict,handle_exceptions
-
+from schema import user_schema,users_schema
 
 
 
@@ -14,13 +14,13 @@ def create_user():
     user = User(**data)
     db.session.add(user)
     db.session.commit()
-    return jsonify(model_to_dict(user)), 201
+    return user_schema.dump(user), 201
    
 
 @app.route('/users', methods=['GET'])
 def get_users():
     users = User.query.all()
-    return jsonify([model_to_dict(u) for u in users])
+    return users_schema.dump(users)
 
 @app.route('/users/<int:id>', methods=['PUT'])
 def update_user(id):

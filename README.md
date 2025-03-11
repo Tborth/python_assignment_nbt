@@ -1,4 +1,9 @@
-# step1
+# how to install
+1. Clone the repo
+2. Install dependencies
+3. Run the Flask server
+
+step1:-
 #pip3 install -r requirments.txt
 
 #step2

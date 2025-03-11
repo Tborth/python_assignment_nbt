@@ -1,12 +1,14 @@
 # User Schema
 from apps import ma
 from models import User,Department,Course,Student,AttendanceLog
-class UserSchema(ma.SQLAlchemyAutoSchema):
+from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
+
+class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = User
 
 # Department Schema
-class DepartmentSchema(ma.SQLAlchemyAutoSchema):
+class DepartmentSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Department
 
